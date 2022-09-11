@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>if condition checking</h1><br>
+    <h1>Your grade : </h1><br>
+    <h3>To know your grade enter your percentage </h3><br>
+         <form onsubmit="doCheck(); return false">
+         <input type="number" max="100" id="percentage">
+         <button>Know your grade</button>
+         </form><br>
+         <h1 id="grade"></h1>
+ <script>
+   function doCheck(){
+     let percentage = +document.querySelector("#percentage").value;
+     if(percentage>81){
+       let grade="A+"
+       document.querySelector("#grade").innerHTML=grade;
+     }
+     else if(percentage>71){
+       let grade="A"
+       document.querySelector("#grade").innerHTML=grade;
+     }
+     else if(percentage>61){
+       let grade="B"
+       document.querySelector("#grade").innerHTML=grade;
+     }
+     else if(percentage>51){
+       let grade="C"
+       document.querySelector("#grade").innerHTML=grade;
+     }
+     else {
+       let grade='F'
+       document.querySelector("#grade").innerHTML=grade;
+ 
+     }
+ 
+   }
+      
+
+
+    </script>
+</body>
+</html>
